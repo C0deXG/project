@@ -5,16 +5,16 @@
 	if (a == 'project')
 		alert("welcome!😃");
 	
-	else if (a.toLowerCase.toUpperCase){
-		alert('welcome!😃');
-	}
-	
-	else if (a.toUpperCase.toLowerCase){
-		alert('welcome!😃');
-	}
 	else if (a != 'project')
 		window.location = "index.html";
 
+	$('#s').keyup(function (){
+    var lastChar = $('#s').val().substr($('#s').val().length - 1);
+    if(lastChar.match('[A-Z]'))
+    {
+        $('#s').val($('#s').val().slice(0,-1));
+    }
+});
 </script>
 
 <head>
