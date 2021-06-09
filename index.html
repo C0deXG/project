@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-	a=prompt("password👇 | you need a password🔑 to access this website 🙂");
-	if (a == '1212')
-		alert("welcome!😃");
+	<script>
+		a=prompt("password👇 | you need a password🔑 to access this website 🙂");
+		if (a == '1212')
+			alert("welcome!😃");
+		
+		else if (a != '1212')
+			window.location = "index.html";
 	
-	else if (a != '1212')
-		window.location = "index.html";
-
-	
-</script>
-
+		
+	</script>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,7 +42,65 @@
 
 <body id="top">
 
+	</div>
+	<div class="cursor"></div>
+	<div class="cursor2"></div>
+
+	<script>
+			var cursor = document.querySelector(".cursor");
+			var cursor2 = document.querySelector(".cursor2");
+			document.addEventListener("mousemove", function(e) {
+					cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+			});
+
+	</script>
+
+	<style>
+		.cursor {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #c6c6c6;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+}
+
+.cursor2 {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: #d43333;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .15s;
+}
+
+.content:hover ~ .cursor {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: #c6c6c6;
+    opacity: .5;
+}
+
+.content:hover ~ .cursor2 {
+    opacity: 0;
+}
+
+	</style>
+
 	<!-- ****************************** Preloader ************************** -->
+	<div id="preloader"></div>
+
+
+	<!-- ==========================
+        HEADER SECTION 
+        =========================== -->
 	<header id="home">
 		<!-- creative menu -->
 		<div class="container-fluid">
@@ -63,12 +120,6 @@
 				</div>
 				<button class="menu-button" id="open-button"></button><!-- menu button -->
 			</div>
-
-
-	<!-- ==========================
-        HEADER SECTION 
-        =========================== -->
-	
 			<!--/row-->
 		</div>
 		<!--/container-->
@@ -178,9 +229,9 @@
 							<div class="">
 								<img style="width: 250px; border-radius: 20px;" src="img/dicision making.jpeg" alt="">
 							</div>
-							<h2>PROBLEM <span style="color: rgba(90, 84, 34, 0.972);">-</span> <span style="color: blue;">SOLVING
-									SKILLS</span></h2><!-- Title -->
-							<p>There is No Text here for Now</p><!-- Description -->
+							<h2>DECISION <span style="color: rgba(90, 84, 34, 0.972);">-</span> <span style="color: gray;">
+								MAKING</span></h2><!-- Title -->
+							<p>Like in The Glass Castle, <b>when Jeannette said In less than three months, I’m leaving for New York City” (82%)</b> Decision making plays a vital role in the life of students. It diverts the students from falling into the trap that manages the students and saves their career life. It promotes self-determination on how to make good decisions and choices.</p><!-- Description -->
 						</div>
 					</div>
 					<div class="clearfix"></div>
@@ -205,40 +256,39 @@
 				<!--
 				
 				headline-->
-				<p>high school counselors should make sure and ask students how they feel or doing to prevent <b>abuse,difficult
-						situations,stress,bullying</b> and if counselors suspect chlid abuse they should report to Child Protection
-					service because for example if <b>Jeannette Walls</b> counselors make sure kids are doing wall maybe
-					<b>Jeannette</b> wouldn't go through a difficult life.
+				<p>high school counselors should make sure and ask students how they feel or doing to prevent <b>abuse,difficult situations,stress,bullying</b> and if counselors suspect chlid abuse they should report to Child Protection service because for example if <b>Jeannette Walls</b> counselors make sure kids are doing wall maybe <b>Jeannette</b> wouldn't go through a difficult life.
 				</p><br><!-- About Text 1 -->
-				<a href="https://childcare.gov/consumer-education/child-protective-services" target="_blank"
-					class="weight-outline-btn">Read more</a><!-- read more button  -->
+				<a href="https://childcare.gov/consumer-education/child-protective-services" target="_blank" class="weight-outline-btn">Read more</a><!-- read more button  -->
 			</div>
 		</div>
 		<!-- About 2 -->
 		<div class="row">
 			<div class="col-md-6 about-text">
-				<h6>students should not be afrid of there probles</h6><!-- Headline -->
-				<p>Student should face there problems because most of the students who have a difficult life has they are 
-					scared to face there problems so the school and the teachers 
-					should tell the student to face there problems
-				</p><br>
-				<!-- About Text 2 -->
-				<a href="index.html#team" class="weight-outline-btn">Read more</a> <!-- read more button  -->
+				<h6>Formal learning</h6><!-- Headline -->
+				<p>there is a times when formal education could different like accent,culture,stats etc
+					like it happened to Jeanette <b>"“Wuts et tahm sebm?” 
+					“Excuse me?” I said. 
+					“Et tahm sebm!” he said louder. 
+					I was completely bewildered. I looked at Mom. 
+					“She doesn’t understand your accent,” Mom told the principal. He frowned. Mom turned to me. “He’s asking you what’s eight times seven.” 
+					“Oh!” I shouted. “Fifty-six! Eight times seven is fifty-six!” I started spouting out all sorts of mathematical equations. 
+					The principal looked at me blankly (45%)"</b> and that could cause several problems like doesn’t recognize what you’re good at or not fitting in it at school, i want to advise that form the school counselors so they can prevent it.
+				</p><br><!-- About Text 2 -->
+				<a href="https://www.themuse.com/advice/4-ways-figure-out-what-youre-good-at-not-just-passionate-about" class="weight-outline-btn" target="_blank" >Read more</a> <!-- read more button  -->
 			</div>
 			<div class="col-md-6 nopadding features-intro-img">
-				<div class="about-image" style="background-image:url(img/about2.png)"></div><!-- about image 2 -->
+				<div class="about-image" style="background-image:url(img/forumal.jpg)"></div><!-- about image 2 -->
 			</div>
 		</div>
 		<!-- About 3 -->
 		<div class="row color-bg">
 			<div class="col-md-6 nopadding features-intro-img">
-				<div class="about-image" style="background-image:url(img/about3.png)"></div><!-- about image 3 -->
+				<div class="about-image" style="background-image:url(img/bullying.jpg)"></div><!-- about image 3 -->
 			</div>
 			<div class="col-md-6 about-text">
-				<h6>noting here yet</h6><!-- Headline-->
-				<p>noting here yet
-				</p><br><!-- About Text 3 -->
-				<a href="index.html#team" class="weight-outline-btn">Read more</a><!-- read more button  -->
+				<h6>School bullying</h6><!-- Headline-->
+				<p>Bullying can impact a student on physical, mental and emotional levels and this happened to Jeanette <b>"They beat me up pretty bad, pulling my hair and tearing my clothes and calling me a teacher’s pet and a matchstick"(14%)</b> schools should stopp bullying with iron hand and students should Remember the bulles want to upset you constantly so you get angry. If you don’t get angry, the bully will lose their own power.</p><br><!-- About Text 3 -->
+				<a href="https://www.stopbullying.gov/" class="weight-outline-btn" target="_blank" >Read more</a><!-- read more button  -->
 			</div>
 		</div>
 	</div>
@@ -247,146 +297,6 @@
         =========================== -->
 
 
-
-
-	<!-- ==========================
-        PORTFOLIO SECTION
-    =========================== -->
-	<section class="swag text-center" id="portfolio">
-		<div class="container">
-			<!-- Headline -->
-			<div class="row">
-				<h1 class="arrow">
-					Recent <span>Porojects</span>
-				</h1>
-			</div>
-		</div>
-	</section>
-
-	<div class="container">
-		<div class="row row-offset-0">
-
-			<!-- PORTFOLIO ITEM 1 -->
-			<div class="col-md-3 col-sm-6">
-				<div class="overlay-effect effects clearfix">
-					<div class="img">
-						<a href="img/portfolio/portfolio-01-large.jpg" data-lightbox="roadtrip"
-							title="Project One - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-01-thumbnail.jpg"
-								alt="Portfolio Item"></a>
-					</div>
-				</div>
-			</div>
-			<!-- PORTFOLIO ITEM END -->
-
-			<!-- PORTFOLIO ITEM 2 -->
-			<div class="col-md-3 col-sm-6">
-				<div class="overlay-effect effects clearfix">
-					<div class="img">
-						<a href="img/portfolio/portfolio-02-large.jpg" data-lightbox="roadtrip"
-							title="Project Two - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-02-thumbnail.jpg"
-								alt="Portfolio Item"></a>
-					</div>
-				</div>
-			</div>
-			<!-- PORTFOLIO ITEM END -->
-
-			<!-- PORTFOLIO ITEM 3 -->
-			<div class="col-md-3 col-sm-6">
-				<div class="overlay-effect effects clearfix">
-					<div class="img">
-						<a href="img/portfolio/portfolio-03-large.jpg" data-lightbox="roadtrip"
-							title="Project Three - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-03-thumbnail.jpg"
-								alt="Portfolio Item"></a>
-					</div>
-				</div>
-			</div>
-			<!-- PORTFOLIO ITEM END -->
-
-			<!-- PORTFOLIO ITEM 4 -->
-			<div class="col-md-3 col-sm-6 ">
-				<div class="overlay-effect effects clearfix">
-					<div class="img">
-						<a href="img/portfolio/portfolio-04-large.jpg" data-lightbox="roadtrip"
-							title="Project Four - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-04-thumbnail.jpg"
-								alt="Portfolio Item"></a>
-					</div>
-				</div>
-			</div>
-			<!-- PORTFOLIO ITEM END -->
-
-			<!-- PORTFOLIO ITEM 5 -->
-			<div class="col-md-3 col-sm-6 ">
-				<div class="overlay-effect effects clearfix">
-					<div class="img">
-						<a href="img/portfolio/portfolio-05-large.jpg" data-lightbox="roadtrip"
-							title="Project Five - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-05-thumbnail.jpg"
-								alt="Portfolio Item"></a>
-					</div>
-				</div>
-			</div>
-			<!-- PORTFOLIO ITEM END -->
-
-			<!-- PORTFOLIO ITEM 6 -->
-			<div class="col-md-3 col-sm-6">
-				<div class="overlay-effect effects clearfix">
-					<div class="img">
-						<a href="img/portfolio/portfolio-06-large.jpg" data-lightbox="roadtrip"
-							title="Project Six - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-06-thumbnail.jpg"
-								alt="Portfolio Item"></a>
-					</div>
-				</div>
-			</div>
-			<!-- PORTFOLIO ITEM END -->
-
-			<!-- PORTFOLIO ITEM 7 -->
-			<div class="col-md-3 col-sm-6">
-				<div class="overlay-effect effects clearfix">
-					<div class="img">
-						<a href="img/portfolio/portfolio-07-large.jpg" data-lightbox="roadtrip"
-							title="Project Seven - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-07-thumbnail.jpg"
-								alt="Portfolio Item"></a>
-					</div>
-				</div>
-			</div>
-			<!-- PORTFOLIO ITEM END -->
-
-			<!-- PORTFOLIO ITEM 8 -->
-			<div class="col-md-3 col-sm-6">
-				<div class="overlay-effect effects clearfix">
-					<div class="img">
-						<a href="img/portfolio/portfolio-08-large.jpg" data-lightbox="roadtrip"
-							title="Project Eight - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-08-thumbnail.jpg"
-								alt="Portfolio Item"></a>
-					</div>
-				</div>
-			</div>
-			<!-- PORTFOLIO ITEM END -->
-		</div>
-		<!--/row-->
-	</div>
-	<!--/.container-->
-	<!-- ==========================
-        PORTFOLIO SECTION END
-        =========================== -->
-
-
-
-
-	<!-- ==========================
-        CUSTOM SPACER
-        =========================== -->
-	<div class="spacer-cta text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<a href="index.html#contact" class="outline-btn">Read more</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- ==========================
-        CUSTOM SPACER END
-        =========================== -->
 
 
 
@@ -398,7 +308,7 @@
 			<!-- Headline -->
 			<div class="row">
 				<div class="col-md-12">
-					<h1 class="arrow">My <span>little</span> blog</h1>
+					<h1 class="arrow">ad<span>vi</span>se</h1>
 				</div>
 			</div><br><br>
 
@@ -411,23 +321,23 @@
 							<div class="col-md-4 wp4">
 								<div class="overlay-effect effects clearfix">
 									<div class="img">
-										<img src="img/blog1.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
+										<img src="img/way.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
 									</div>
 								</div>
 								<br>
-								<h2>noting here yet</h2><!-- Headline -->
-								<p>noting here yet</p><!-- Description-->
+								<h2><b style="color: violet;">making hard decisions</b> </h2><!-- Headline -->
+								<p>It's something we get to decide instead of looking out into the world and trying to discover some nonexistent fact about which path of life is best for you. You actually get to create that value for yourself by committing.</p><!-- Description-->
 							</div>
 							<!-- Blog Entry 2 -->
 							<div class="col-md-4 wp4 delay-05s">
 								<div class="overlay-effect effects clearfix">
 									<div class="img">
-										<img src="img/blog2.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
+										<img src="img/leaving.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
 									</div>
 								</div>
 								<br>
-								<h2>nothing here yet</h2><!-- Headline -->
-								<p>noting here yet</p><!-- Description -->
+								<h2><b style="color: rgb(105, 141, 32);">leave the past behind</b></h2><!-- Headline -->
+								<p>Making new memories is better being stuck in the past. In fact, it's been discovered by scientists that having too many old memories makes it more difficult to make new memories. So, out with the old and in with the new.</p><!-- Description -->
 							</div>
 							<!-- Blog Entry 3 -->
 							<div class="col-md-4 wp4 delay-1s">
@@ -437,8 +347,8 @@
 									</div>
 								</div>
 								<br>
-								<h2>noting here yet</h2><!-- Headline -->
-								<p>noting here yet</p><!-- Description-->
+								<h2><b style="color: red;">staying calm</b></h2><!-- Headline -->
+								<p>Staying calm allows you to think logically and take decisions accordingly. Clarity of mind is extremely important while you are dealing with problems. If your mind is free and relaxed, your clarity on thoughts shall provide the solution to you. Staying calm allows you to discuss things rather than fights.</p><!-- Description-->
 							</div>
 						</li>
 						<li>
@@ -446,23 +356,23 @@
 							<div class="col-md-4 wp4">
 								<div class="overlay-effect effects clearfix">
 									<div class="img">
-										<img src="img/blog1.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
+										<img src="img/way.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
 									</div>
 								</div>
 								<br>
-								<h2>nothing here yet</h2><!-- Headline -->
-								<p>nothing here yet</p><!-- Description -->
+								<h2><b style="color: rgb(131, 109, 102);">making hard decisions</b></h2><!-- Headline -->
+								<p>It's something we get to decide instead of looking out into the world and trying to discover some nonexistent fact about which path of life is best for you. You actually get to create that value for yourself by committing.</p><!-- Description -->
 							</div>
 							<!-- Blog Entry 5 -->
 							<div class="col-md-4 wp4 delay-05s">
 								<div class="overlay-effect effects clearfix">
 									<div class="img">
-										<img src="img/blog2.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
+										<img src="img/leaving.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
 									</div>
 								</div>
 								<br>
-								<h2>nothing here yet</h2>
-								<p>nothing here yet</p>
+								<h2><b style="color: rgba(28, 58, 112, 0.342);">leave the past behind</b></h2>
+								<p>Making new memories is better being stuck in the past. In fact, it's been discovered by scientists that having too many old memories makes it more difficult to make new memories. So, out with the old and in with the new.</p>
 							</div>
 							<!-- Blog Entry 6 -->
 							<div class="col-md-4 wp4 delay-1s">
@@ -472,8 +382,8 @@
 									</div>
 								</div>
 								<br>
-								<h2>nothing here yet</h2><!-- Headline -->
-								<p>nothing here yet</p><!-- Description -->
+								<h2><b style="color: rgba(107, 42, 30, 0.26);">staying calm</b></h2><!-- Headline -->
+								<p>Staying calm allows you to think logically and take decisions accordingly. Clarity of mind is extremely important while you are dealing with problems. If your mind is free and relaxed, your clarity on thoughts shall provide the solution to you. Staying calm allows you to discuss things rather than fights.</p><!-- Description -->
 							</div>
 						</li>
 					</ul>
@@ -481,13 +391,118 @@
 			</div>
 		</div>
 	</section>
+	<!-- ==========================
+        BLOG SECTION END
+        =========================== -->
 
+
+
+	<!-- ==========================
+        CLIENT SECTION 
+        =========================== -->
+
+	<!-- ==========================
+        CLIENTS SECTION END
+        =========================== -->
+
+
+
+
+
+	<!-- ==========================
+        NEWSLETTER SECTION 
+  
+	<!-- ==========================
+        NEWSLETTER SECTION END
+        =========================== -->
+
+
+
+	<!-- ==========================
+        CONTACT SECTION
+        =========================== -->
+
+			<!-- Social Buttons - use font-awesome, past in what you want -->
+	
+	<!-- ==========================
+        CONTACT SECTION END
+        =========================== -->
+
+
+	<!-- ==========================
+        FOOTER SECTION
+        =========================== -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p sty>All Rights Reserved. &copy; <span style="color: blue;">2021
+</span> <a href="http://www.themewagon.com">by Kheder</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- ==========================
+        FOOTER SECTION END
+        =========================== -->
+
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- SmoothScroll -->
+	<script type="text/javascript" src="assets/smoothscroll/smoothscroll.js"></script>
+	<!-- Bootstrap -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/waypoints.min.js"></script>
+	<!-- classie.js -->
+	<script src="js/classie.js"></script>
+	<!-- FlexSlider -->
+	<script src="assets/flexslider/jquery.flexslider.js"></script>
+	<!-- Modernizr -->
+	<script src="js/modernizr.js"></script>
+	<!-- Text Rotator -->
+	<script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
+	<!-- Lightbox.js -->
+	<script src="assets/lightbox/js/lightbox.min.js"></script>
+	<!-- Google Maps -->
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeKBBPJTG3v5w3cNPAgM6ZsJiPyL1mP_o&amp;sensor=false"></script>
+	<!-- Theme JavaScript Core -->
+	<script src="js/main.js"></script>
+	<script src="js/script.js"></script>
+
+	<!-- GOOGLE MAPS DATA -->
 	<script type="text/javascript">
-if(load == error){
-console.log($error && num);
-}
-	</script>
+		// When the window has finished loading create our google map below
+		google.maps.event.addDomListener(window, 'load', init);
 
+		function init() {
+			// Basic options for a simple Google Map
+			// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+			var mapOptions = {
+				// How zoomed in you want the map to start at (always required)
+				zoom: 15,
+
+				scrollwheel: false,
+
+				// The latitude and longitude to center the map (always required)
+				center: new google.maps.LatLng(40.68961985411178, -74.01618003845215), // New York 
+
+				// How you would like to style the map. 
+				// This is where you would paste any style found on Snazzy Maps.
+				styles: [{ featureType: 'water', stylers: [{ color: '#F2F2F2' }, { visibility: 'on' }] }, { featureType: 'landscape', stylers: [{ color: '#FFFFFF' }] }, { featureType: 'road', stylers: [{ saturation: -100 }, { lightness: 45 }] }, { featureType: 'road.highway', stylers: [{ visibility: 'simplified' }] }, { featureType: 'road.arterial', elementType: 'labels.icon', stylers: [{ visibility: 'off' }] }, { featureType: 'administrative', elementType: 'labels.text.fill', stylers: [{ color: '#ADADAD' }] }, { featureType: 'transit', stylers: [{ visibility: 'off' }] }, { featureType: 'poi', stylers: [{ visibility: 'off' }] }]
+			};
+
+			// Get the HTML DOM element that will contain your map 
+			// We are using a div with id="map" seen below in the <body>
+			var mapElement = document.getElementById('googlemaps');
+
+			// Create the Google Map using out element and options defined above
+			var map = new google.maps.Map(mapElement, mapOptions);
+		}
+
+	</script>
 
 	<!-- TEXT ROTATOR SETTINGS -->
 	<script type="text/javascript">
@@ -497,10 +512,6 @@ console.log($error && num);
 			speed: 2000 // How many milliseconds until the next word show.
 		});
 	</script>
-	
-	
-
-	
 
 </body>
 
